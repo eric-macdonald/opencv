@@ -1,3 +1,4 @@
+#!/Users/eric.w.macdonald/miniconda2/bin/python
 import numpy as np
 import statistics
 from scipy.signal import lfilter, lfilter_zi, filtfilt, butter

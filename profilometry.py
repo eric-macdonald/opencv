@@ -1,3 +1,4 @@
+#!/Users/eric.w.macdonald/miniconda2/bin/python
 import numpy as np
 import statistics
 from scipy.signal import lfilter, lfilter_zi, filtfilt, butter
@@ -146,7 +147,7 @@ print "scalingY"
 print maxvarvaly, minvarvaly
 print scalery, addery
 
-print "pointvar, vert_var, horz_var, tempvar, tempvarx, tempvary, variance_frame[idx1][idx2], variancex_frame[idx1][idx2], variancey_frame[idx1][idx2], idx1, idx2"
+#print "pointvar, vert_var, horz_var, tempvar, tempvarx, tempvary, variance_frame[idx1][idx2], variancex_frame[idx1][idx2], variancey_frame[idx1][idx2], idx1, idx2"
 for idx1 in range(0, rows, 1):
     for idx2 in range(0, columns, 1):
         tempvar =  scaler*(pre_variance_frame[idx1][idx2] + adder)
