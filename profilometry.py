@@ -13,6 +13,7 @@ import time
 start_time = time.time()
 
 short_name = sys.argv[1]
+length = sys.argv[2]
 print "start of analyze.py"
 print "file name " + str(sys.argv[1])
 frame_filename = str(sys.argv[1]) + "frame.jpg"
@@ -24,14 +25,14 @@ print "variance name " + variance_filename
 
 minval = 1000
 maxval = -1000
-scan = np.ones((int(15000),int(800),1), np.float32)
-frame = np.ones((int(15000),int(800),1), np.uint8)
-pre_variance_frame = np.ones((int(15000),int(800),1), np.float32)
-pre_variancey_frame = np.ones((int(15000),int(800),1), np.float32)
-pre_variancex_frame = np.ones((int(15000),int(800),1), np.float32)
-variance_frame = np.ones((int(15000),int(800),1), np.uint8)
-variancex_frame = np.ones((int(15000),int(800),1), np.uint8)
-variancey_frame = np.ones((int(15000),int(800),1), np.uint8)
+scan = np.ones((int(length),int(800),1), np.float32)
+frame = np.ones((int(length),int(800),1), np.uint8)
+pre_variance_frame = np.ones((int(length),int(800),1), np.float32)
+pre_variancey_frame = np.ones((int(length),int(800),1), np.float32)
+pre_variancex_frame = np.ones((int(length),int(800),1), np.float32)
+variance_frame = np.ones((int(length),int(800),1), np.uint8)
+variancex_frame = np.ones((int(length),int(800),1), np.uint8)
+variancey_frame = np.ones((int(length),int(800),1), np.uint8)
 
 file = open(sys.argv[1], 'r') 
 index = 0 
