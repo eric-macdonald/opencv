@@ -93,6 +93,7 @@ for idx1 in range(4, rows-4, 1):
             for offset2 in range(-2, 3, 1):
                 window[offset1+2][offset2+2] = scan[idx1+offset1][idx2+offset2]
         pointvar = math.log(np.var(window) + 0.0000001)
+        #pointvar = (np.var(window) + 0.0000001)
         vert_window[0] = np.average(window[:,0])
         vert_window[1] = np.average(window[:,1])
         vert_window[2] = np.average(window[:,2])
@@ -154,7 +155,7 @@ for idx1 in range(0, rows, 1):
         tempvarx = scalerx*(pre_variancex_frame[idx1][idx2] + adderx)
         tempvary = scalery*(pre_variancey_frame[idx1][idx2] + addery)
         variance_frame[idx1][idx2] = np.uint8(tempvar)
-        variancex_frame[idx1][idx2] = np.uint8(tempvar)
+        variancex_frame[idx1][idx2] = np.uint8(tempvarx)
         variancey_frame[idx1][idx2] = np.uint8(tempvary)
         if((idx1%400) == 0):
             if((idx2%400) == 0):
